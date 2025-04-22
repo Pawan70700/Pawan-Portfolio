@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raj | Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+     :root {
+        --bg: #040813;
+        --primary: #38BDF8;
+        --accent: #7ac731;
+        --card: #cc151e;
+        --text: #f6f7f8;
+    }
+    
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        scroll-behavior: smooth;
+    }
+    
+    a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .navbar {
+        position: sticky;
+        top: 0;
+        background: var(--card);
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        z-index: 100;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    
+    .navbar nav a {
+        margin: 0 1rem;
+        font-weight: 600;
+    }
+    
+    .section {
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    
+    .hero {
+        position: relative;
+        padding: 6rem 2rem;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .hero-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid var(--primary);
+        margin-bottom: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons a {
+        padding: 0.8rem 1.5rem;
+        margin: 0.5rem;
+        border-radius: 8px;
+        font-weight: bold;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+    
+    .btn {
+        background: var(--primary);
+        color: var(--bg);
+    }
+    
+    .btn-outline {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+    }
+    
+    .btn:hover,
+    .btn-outline:hover {
+        transform: scale(1.05);
+    }
+    
+    .blob {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.3;
+        z-index: -1;
+    }
+    
+    .blob1 {
+        background: var(--primary);
+        width: 300px;
+        height: 300px;
+        top: -50px;
+        left: -50px;
+        filter: blur(80px);
+    }
+    
+    .blob2 {
+        background: var(--accent);
+        width: 300px;
+        height: 300px;
+        bottom: -50px;
+        right: -50px;
+        filter: blur(80px);
+    }
+    /* Cards & Grid */
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .card {
+        background: var(--card);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    /* Glass card */
+    
+    .glass {
+        background: rgba(30, 41, 59, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    /* Contact */
+    
+    form {
+        max-width: 500px;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    input,
+    textarea {
+        padding: 0.8rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--card);
+        color: var(--text);
+    }
+    
+    button {
+        background: var(--primary);
+        color: var(--bg);
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background: #0ea5e9;
+    }
+    
+    .social a {
+        margin: 0 1rem;
+        font-weight: 600;
+    }
+    /* Footer */
+    
+    footer {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card);
+        margin-top: 4rem;
+    }
+    /* Responsive */
+    
+    @media (max-width: 768px) {
+        .navbar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Pawan Kumar</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero section">
+        <div class="hero-content">
+            <img src="C:\Users\pawan\OneDrive\Desktop\WhatsApp Image 2025-04-06 at 21.11.00_585e73b1.jpg" alt="Raj Profile" class="hero-img" />
+            <h1>Hi, I'm Pawan 👋</h1>
+            <p>I build creative and functional web experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#" class="btn-outline">Download Resume</a>
+            </div>
+        </div>
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I’m Pawan — a passionate frontend and full-stack developer. I started my coding journey out of curiosity and now it's my superpower. I love turning complex problems into beautiful interfaces.
+        </p>
+        <div class="tech-icons">
+            <span>🌐</span>
+            <span>⚛</span>
+            <span>🖥</span>
+            <span>📱</span>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="grid">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">React</div>
+            <div class="card">Node.js</div>
+            <div class="card">MongoDB</div>
+            <div class="card">Git & GitHub</div>
+            <div class="card">Responsive Design</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card glass">
+                <h3>Portfolio Website</h3>
+                <p>Modern portfolio with animations, responsiveness, and clean UI.</p>
+                <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+            </div>
+            <div class="card glass">
+                <h3>clone websites</h3>
+                <p>Frontent app to list and apply for jobs with filters and user auth.</p>
+                <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section">
+        <h2>Resume</h2>
+        <p>Download my resume and explore my journey 👇</p>
+        <a href="#" class="btn">Download PDF</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <div class="social">
+            <a href="https://instagram.com" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/your-number" target="_blank"><i
+                        class="fab fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i
+                        class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Pawan Kumar | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
